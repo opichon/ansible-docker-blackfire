@@ -1,0 +1,21 @@
+---
+- name: Create network
+  docker_network:
+    driver: bridge
+    name: "{{ blackfire_network }}"
+
+- name: Run blackfire agent
+  docker_container:
+    image: blackfire/blackfire:latest
+    name: "{{ blackfire_hostname }}"
+    env:
+      BLACKFIRE_SERVER_ID: "{{ blackfire_server_id }}"
+      BLACKFIRE_SERVER_TOKEN: "{{ blackfire_server_token }}"
+    labels:
+      traefik.enable: "false"
+    networks:
+      - name: "{{ blackfire_network }}"
+    pull: True
+    recreate: True
+    restart_policy: always
+    state: "{{ blackfire_state }}"
