@@ -1,7 +1,7 @@
 opichon.docker-blackfire
 =========
 
-Ansubiel role to run [blackfire.io](https://blackfire.io/docs/integrations/docker) agent as a docker container.
+Ansible role to run [blackfire.io](https://blackfire.io/docs/integrations/docker) agent as a docker container.
 
 Role Variables
 --------------
