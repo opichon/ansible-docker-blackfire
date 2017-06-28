@@ -7,7 +7,7 @@ Role Variables
 --------------
 
 * blackfire_hostname: blackfire
-* blackfire_network
+* blackfire_network: blackfire
 * blackfire_server_id
 * blackfire_server_token
 * blackfire_state: started
